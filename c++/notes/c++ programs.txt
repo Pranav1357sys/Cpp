@@ -1,0 +1,390 @@
+1.sum:
+#include <iostream>
+using namespace std;
+typedef int INTEGER;
+INTEGER addition(INTEGER a,INTEGER b){
+return a+b;
+}
+
+
+2.return a number:
+#include <iostream>
+int main(){
+std::cout<<"Enter a number: ";
+int num;
+std::cin>>num;
+std::cout<<"You entered:"<<num<<std::endl;
+return 0;
+}
+
+
+3.print hello c++!:
+#include <iostream>
+using namespace std;
+int main(){
+cout<<"Hello c++!";
+return 0;
+}
+
+4.for if statements:
+#include <iostream>
+using namespace std;
+int main(){
+    int num;
+    cout<<"Enter the number :";
+    cin>>num;
+    if(num>0){
+        cout<<"positive";}
+    else if(num<0){
+        cout<<"negative";}
+    else{
+        cout<<"zero";}
+    }
+
+
+5.for switch:
+#include <iostream>
+using namespace std;
+int main(){
+    int day;
+    cout<<"Enter the day:";
+    cin>>day;
+    switch(day){
+        case 1:cout<<"It's monday";
+        break;
+        case 2:cout<<"It's tuesday";
+        break;
+        case 3:cout<<"It's wednesday";
+        break;
+        case 4:cout<<"It's thursday";
+        break;
+        case 5:cout<<"It's friday";
+        break;
+        case 6:cout<<"It's saturday";
+        break;
+        case 7:cout<<"It's sunday";
+        break;
+        default:cout<<"The day is not valid";
+    }
+    }
+
+
+6.for leap year:
+#include <iostream>
+using namespace std;
+int main(){
+    int year;
+    cout<<"Enter the year:";
+    cin>>year;
+    if((year%4==0 && year%100!=0) || year%400==0){
+        cout<<"It's a leap year";}
+    else{
+        cout<<"It's not a leap year";
+    }
+    }
+
+
+
+
+7.for vowels:
+#include <iostream>
+using namespace std;
+int main(){
+    char alpha;
+    cout<<"Enter the char:";
+    cin>>alpha;
+    switch(tolower(alpha)){
+        case 'a':case 'e':case 'i':case 'o':case 'u':cout<<"It's a vowel";
+        break;
+        default:cout<<"It's a consonant";
+        }
+}
+
+
+
+8.for even and odd:
+#include <iostream>
+using namespace std;
+int main(){
+    int num;
+    cout<<"Enter the number:";
+    cin>>num;
+    if(num%2==0){
+        cout<<"The number is even";}
+    else{
+        cout<<"The number is odd";}
+}
+
+
+medium level :
+1. Write a program that takes three numbers as input and prints the largest using nested if-else.
+2. Write a C++ program to check if a given year is a leap year by not using if-else.
+3. Write a menu-driven program that allows the user to choose a mathematical operation (addition, 
+subtraction, multiplication, or division) using a switch statement.
+4. Write a program that takes three numbers as input and prints the largest using nested if-else.
+5. Implement a simple calculator that allows the user to choose an operation (addition, subtraction, 
+multiplication, division) using a switch statement.
+6. Write a program to classify a triangle as equilateral, isosceles, or scalene based on its side lengths 
+using if-else.
+7. Write a program that calculates electricity bill based on the following:
+a) Up to 100 units: ₹2 per unit
+b) 101-300 units: ₹5 per unit
+c) Above 300 units: ₹8 per unit
+8. Write a C++ program to check if a character is uppercase, lowercase, a digit, or a special character using if-else.
+
+
+ANSWERS:
+1.)#include <iostream>
+using namespace std;
+
+int main() {
+    int n1, n2, n3;
+    cout << "Enter three numbers: ";
+    cin >> n1 >> n2 >> n3;
+
+    if (n1 > n2 && n1>n3){
+        cout<<n1<<" is highest"<<endl;}
+    else if(n2>n1 && n2>n3){
+        cout<<n2<<" is highest"<<endl;
+    }
+    else{
+        cout<<n3<<" is highest"<<endl;
+    }
+    }
+
+
+2.)#include <iostream>
+using namespace std;
+
+int main() {
+    int year;
+    cout << "Enter the year: ";
+    cin>>year;
+    cout<<((year%400==0)? "Leap year" 
+    :(year%100==0)? "not a leap year"
+    :(year%4==0) ?"leap year"
+    :"not a leap year");
+}
+
+
+3.)#include <iostream>
+using namespace std;
+
+int main() {
+    int op;
+    float a,b;
+    cout<<"1.Addition"<<endl;
+    cout<<"2.subtraction"<<endl;
+    cout<<"3.multiplication"<<endl;
+    cout<<"4.division"<<endl;
+    cout<<"Ennter operation:";
+    cin>>op;
+    cout<<"Enter a:";
+    cin>>a;
+    cout<<"Enter b:";
+    cin>>b;
+    switch(op){
+        case 1:
+        cout<<"Sum is"<<a+b;
+        break;
+        case 2:
+        cout<<"sub is"<<a-b;
+        break;
+        case 3:
+        cout<<"Mult is"<<a*b;
+        break;
+        default:
+	if(a!=0){
+	cout<<a/b;}
+	else{
+	cout<<"Division by 0 error";
+        cout<<"Div is";
+    }
+}
+
+
+6.)#include <iostream>
+using namespace std;
+
+int main() {
+    int side1,side2,side3;
+    cout<<"Enter the length of first side"<<endl;
+    cin>>side1;
+    cout<<"Enter the length of second side"<<endl;
+    cin>>side2;
+    cout<<"Enter the length of third side"<<endl;
+    cin>>side3;
+    if(side1==side2 && side2==side3){
+        cout<<"It's an equilateral triangle";}
+    else if(side1==side2 && side2!=side3){
+        cout<<"It's an isosceles triangle";}
+    else{
+        cout<<"It's a scalene triangle";
+    }
+    }
+
+
+7.)#include <iostream>
+using namespace std;
+
+int main() {
+    int power,bill;
+    cout<<"Enter power consumed"<<endl;
+    cin>>power;
+    if(power<101){
+        bill=power*2;
+        cout<<"Electricity bill is :"<<bill;}
+    else if(100<power<301){
+        bill=power*5;
+        cout<<"Electricity bill is: "<<bill;
+    }
+    else{
+        bill=power*8;
+        cout<<"Electricity bill is: "<<bill;
+    }
+    }
+
+
+
+8.)#include <iostream>
+#include <cctype>
+using namespace std;
+
+int main() {
+    char ch;
+    cout << "Enter a character: ";
+    cin >> ch;
+
+    if (isupper(ch)) {
+        cout << "Uppercase alphabet";
+    } else if (islower(ch)) {
+        cout << "Lowercase alphabet";
+    } else if (isdigit(ch)) {
+        cout << "Digit";
+    } else {
+        cout << "Special symbol";
+    }
+
+    return 0;
+}
+
+
+
+MORE MEDIUM QUESTIONS:
+1. Implement a grading system where the user inputs marks and gets grades (A, B, C, etc.) using nested 
+if-else.
+2. Write a C++ program that accepts a three-digit number and determines whether it is an Armstrong 
+number or not.
+3. Write a program that simulates a basic login system with username and password verification using 
+if-else.
+
+ANSWERS:
+3.)Write a program that simulates a basic login system with username and password verification using 
+if-else.
+
+Code:
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    string correctUsername, correctPassword;
+
+    cout << "Set up your username: ";
+    cin >> correctUsername;
+    cout << "Set up your password: ";
+    cin >> correctPassword;
+
+    string username, password;
+
+    cout << "\nEnter username: ";
+    cin >> username;
+    cout << "Enter password: ";
+    cin >> password;
+
+    if (username == correctUsername && password == correctPassword) {
+        cout << "Login successful!\n";
+    } else {
+        cout << "Invalid username or password. Please try again.\n";
+    }
+
+    return 0;
+}
+
+3 digit Armstrong number:
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num, originalNum, remainder, result = 0;
+    cout << "Enter a three-digit integer: ";
+    cin >> num;
+    originalNum = num;
+
+    while (originalNum != 0) {
+        // remainder contains the last digit
+        remainder = originalNum % 10;
+        
+        result += remainder * remainder * remainder;
+        
+        // removing last digit from the original number
+        originalNum /= 10;
+    }
+
+    if (result == num)
+        cout << num << " is an Armstrong number.";
+    else
+        cout << num << " is not an Armstrong number.";
+
+    return 0;
+}
+
+
+looping problems:
+
+1. Write a program to print all even numbers from 1 to N using a while loop.
+2. Write a program that prints numbers from 1 to 50 but skips multiples of 5 using continue.
+3. Write a program to find the sum of the first N natural numbers using a for loop.
+4. Write a program to print the multiplication table of a given number using a do-while loop.
+5. Write a program to find the factorial of a number using a while loop.
+
+Medium:
+1. Write a program to find the sum of elements in a 1D array.
+2. Write a program to find the largest element in a 2D array.
+3. Implement a program to reverse a 1D array using a loop.
+4. Write a program to count the number of prime numbers in an array.
+5. Write a program that searches for an element in an array (linear search) and prints its index if found. 
+Hard:
+1. Write a program to sort an array using the Bubble Sort algorithm.
+2. Write a C++ program to multiply two matrices using a 2D array.
+3. Write a program to find the transpose of a given matrix.
+4. Implement a program that rotates a 1D array to the right by K positions using loops.
+5. Write a program to check if a given matrix is symmetric or not.
+
+
+day4
+----1. Write a program to read a string and print its length using length().
+2. Write a program to concatenate two strings using + operator.
+3. Write a function to check whether a given string is a palindrome.
+4. Write a program to convert a string to uppercase and lowercase.
+5. Write a program to count the number of vowels and consonants in a string.
+Medium:
+1. Write a program to find the first occurrence of a substring in a given string using find().
+2. Implement a function that takes a string and returns its reverse.
+3. Write a function that swaps two numbers using call by reference.
+4. Write a program to replace all spaces in a string with underscores (_).
+5. Implement a function to remove all digits from a given string.
+Hard:
+1. Implement a program that takes a sentence as input and prints the number of words in it.
+2. Write a function that removes duplicate characters from a given string without using extra space.
+3. Write a program to find the most frequently occurring character in a string.
+4. Implement a function that finds and prints all substrings of a given string.
+5. Implement a function that checks if two given strings are anagrams of each other
+
+
+
+
+factorial, Fibonacci, check if the string is palindrome
+
+reverse a string using recursion

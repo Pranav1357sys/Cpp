@@ -1,0 +1,163 @@
+C++:
+-it is an imperative and compiled language
+-adds features like classes , objects,inheritance ,polymorphism and encapsulation
+-it is a middle level language , used for hardware(low level) and software(high level) operations
+-created by bjame stroustrup in 1979
+
+why c++?
+-it is a fast language
+-performance and efficiency
+-used in game development
+
+features of c++:
+-mid level language
+-cross platform( works on many different operating systems)
+-gives more control over the system
+-flexibility
+-easy to learn
+-huge library support
+-advanced concepts
+-faster executions
+
+structure of c++:
+1.document section- this section is used to document the logic of the program what programmer is going to code
+2.link section- contains header file and namespaces
+3.definition section-contains declaration of constant values like pi value
+4.global declaration section- contains declaration of the global variables
+5.function definition section- contains all the functions which the main function will need
+6.main function- main function tell the compiler where to start the execution of the program 
+
+a namespace in c++ is a way to avoid name conflicts when using multiple libraries, it allows grouping related classes ,functions , variables under a unique name
+why namespace? 
+-avoids name clashes btw different libraries or user defined code
+-provides scope control for identifiers
+
+"#include" is a preprocessing directive which contains the iostream file
+in c++ "return 0" is not mandatory to use to return an integer value
+cout- console output is used to display output on the screen, '<<' is called insertion operator, '>>' is called extraction operator which gives data to cin which will read the data from the user, these send the data to cout and cin respectively
+
+control flow statements: 
+they determines the execution flow of a program 
+they allow decisions to be made , loops to be repeated and different section of the code to execute based on conditions
+types:
+1.conditions statement or decision making statements - ex :switch ,if else ,if 
+2.looping statements or iterations statements- ex: for ,while ,do while
+3.Jump statements or control transfer statements- ex: break , continue ,goto ,return 
+
+1.conditions statements:
+these help the program to make decisions based on the condition passed
+- if: executes a block of code if a condition is true , syntax- if(condition){//code to execute if condition is true}
+- if else: executes a block of code if the condition is true otherwise executes the another block, syntax- if(condition){//code to be executed if condition is true} else{// code to be executed if condition is false}
+-else-if: allows multiple conditions to be checked in a sequence , syntax- if(condition){//code if condition is true} else if(condition){//code if this condition is true) else{//code if all conditions are false}
+-switch: when multiple conditions depend on a single variable , syntax-  switch(variale){case value1://code to be executed if variable is same break; case value2://code break; default block;
+
+
+looping statements in c++ allows a set of instructions to be executed repeatedly based on a condition 
+looping statements are essential to help automate repetitive task repeatedly 
+advantages:
+-reducing manual effort 
+-improving efficiency in processing large data
+-automating repetitive task 
+-managing real time system
+-real time applications
+-social media and web application
+-gaming and AI
+-for banking
+
+loops in c++:
+for:- used when the no. of iterations is known.
+syntax: for(initialization ;condition ;step){//code block};
+
+while:- used when the number of iterations is unknown but depends on the condition
+syntax: while(condition){//code block};
+
+do while:- executes the loop body atleast once before checking the condition
+syntax: do{//code block} while(condition);
+
+
+jumping statements in c++ are used to transfer control to a different part of the program those are:
+-break:- exits a loop
+-continue:-skips the current iteration and moves to the next
+-goto:- transfers control to the labeled statement
+-return:- exits from a function and returns a value
+
+bubble sort:- time complexity --(O(n^2))
+
+2d array:
+ener no. of rows
+enter row elements of matrix 1:1 2
+				3 4
+enter row elements of matrix 2: 5 6
+				7 8
+print sum of the matrix: 6 8
+			10 12
+
+
+an array of character ending with 0 is called c style string
+string are used to store txt msgs and textual data
+it performs concatenation,searching,comparision and replacing characters or words
+functions:
+length()
+empty()
+append()
+substr(pos,len)
+find():returns index of the 1st occurrence
+replace(pos,len,str)
+getline(cin,name)
+
+FUNCTIONS:
+functions are the block of codes that perform a specific task , they help organise code, avoid repetition and improve readability and reusability .
+syntax: return_type function_name(parameters_list){code block}
+why use functions?
+break complex problems into smaller part
+improve code reusability
+make programs easier to read and maintain
+
+CALL BY VALUE: a copy of the actual argument is passed to the function
+changes made to the parameter inside the function do not effect the original value
+
+CALL BY REFERENCE: a reference to the actual argument is passed to the function
+changes made to the parameters directly effects the original value 
+
+POINTER:
+pointer is a variable which stores the memory address of another variable
+
+pointer which refers to null is known as dangling pointer
+
+recursion is a programming technique where a function calls itself to solve a smaller instance of the same problem 
+key components: base class , the condition under which the recursion stops
+1 case base case ,2 case recursive case
+the part where the function calls itself with smaller or simpler inputs 
+real world examples:
+backtracking problems like sudoku problems
+binary tree traversal
+graphs dfs
+
+memoization: it is a technique used to optimize recursive function by storing the results of expensive function calls and reusing them when the same inputs occur again 
+
+dynamic memory allows u to allocate memory at the runtime using pointers
+this is especially use when u don't know the size of the datastructure 
+
+object oriented programming language(c++,java,python,etc)
+procedural oriented programming language(c,etc)
+
+an object is an instance of a class, when we create an object memory is allocated
+object has 2 entities- data and functionality
+syntax: class_name object_name;
+class is collection of objects
+class_name always starts with caps
+class is a blueprint or template
+syntax: class class_name{//data members//member functions}
+
+access modifiers:-
+1. public- accessible from anywhere and outside of the class
+2.private- accessible only within the class 
+3.protected- accessible within the class and derived class(inheritance)
+
+private and protected variables can be accessed through getter and setter methods  
+
+access modifier		own		derived			outside class
+public			yes		yes			yes
+private			yes		no			no
+protected		yes		yes			no
+
