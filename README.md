@@ -1,7 +1,7 @@
-#MY CPP REPOSITORY
+# MY CPP REPOSITORY
 ## CONTENTS:
 You can find notes , practice problems and aswell as many cpp problems solutions
-##Notes:
+## Notes:
 this section contains notes and practice problems
-##Programs:
+## Programs:
 This contains solved cpp problems
