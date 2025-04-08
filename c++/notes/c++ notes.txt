@@ -136,7 +136,7 @@ graphs dfs
 memoization: it is a technique used to optimize recursive function by storing the results of expensive function calls and reusing them when the same inputs occur again 
 
 dynamic memory allows u to allocate memory at the runtime using pointers
-this is especially use when u don't know the size of the datastructure 
+this is especially used when u don't know the size of the datastructure 
 
 object oriented programming language(c++,java,python,etc)
 procedural oriented programming language(c,etc)
@@ -161,3 +161,40 @@ public			yes		yes			yes
 private			yes		no			no
 protected		yes		yes			no
 
+
+CONSTRUCTOR: 
+-it has the same name as class_name.
+-constructor is a special function in a class that automatically runs when you create an object of that class.
+-has no return_type
+-used to initialize the default values
+-it can be overloaded
+-syntax: class class_name{
+	 access specifier:
+			classname();		//constructor declaration
+	};
+types: default constructor(when no arguments are given) , parametrized constructor(with arguments) 
+
+DESTRUCTOR:
+-destructor is also a special function in a class that runs automatically when the object is destroyed or goes out of scope.
+-Has the same name as the class, but starts with a tilde ~.
+-No return type.
+-No parameters.
+-Used to free resources (like memory, files, etc)
+-syntax: class class_name{
+	 access_specifier:
+			~class_name();		//destructor declaration 
+	 };
+
+FUNCTION OVERLOADING:
+-Function overloading means you can have multiple functions with the same name, but different parameters.
+-
+
+
+INHERITENCE:
+-it allows to inherit members or function to a child class from a base class or parent class
+TYPES:
+single inheritance: has only 1 child and parent class
+multiple inheritance: 1 child class but multiple parent classes
+multilevel inheritance: 1 child class is derived from another derived class
+hierarchial inheritance: multiple classes derived from a single base class
+hybrid inheritance: combination of one or more type of inheritence

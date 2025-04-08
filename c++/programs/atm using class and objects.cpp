@@ -3,7 +3,7 @@ using namespace std;
 class ATM{
 public:
     double balance;
-    ATM(){
+    ATM(){      //constructor
     balance=0.0;
 }
 void deposit(double amount){
@@ -26,7 +26,7 @@ void checkBalance(){
 }
 };
 int main(){
-ATM user1;
+ATM user1;              //object creation
 user1.deposit(5000);
 user1.withdraw(2000);
 user1.checkBalance();
